@@ -1,9 +1,9 @@
-interface FooterLink {
+export interface FooterLink {
     href: string;
     label: string;
 }
 
-interface FooterSectionProps {
+export interface FooterSectionProps {
     title: string;
     links: FooterLink[];
 }

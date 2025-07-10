@@ -1,31 +1,48 @@
 import { render, screen } from '@testing-library/react';
 import Footer from '../Footer';
+import { FooterLink, FooterSectionProps } from '../type';
 
 // Mock child components to simplify testing
-jest.mock('../FooterSection', () => (props: any) => (
-  <div data-testid={`footer-section-${props.title.toLowerCase()}`}>
-    <h3>{props.title}</h3>
-    <ul>
-      {props.links.map((link: any) => (
-        <li key={link.href}>
-          <a href={link.href}>{link.label}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-));
+jest.mock('../FooterSection', () => {
+  const MockedFooterSection = (props: FooterSectionProps) => (
+    <div data-testid={`footer-section-${props.title.toLowerCase()}`}>
+      <h3>{props.title}</h3>
+      <ul>
+        {props.links.map((link: FooterLink) => (
+          <li key={link.href}>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+  
+  MockedFooterSection.displayName = 'MockedFooterSection';
+  return MockedFooterSection;
+});
 
-jest.mock('../FooterCopyright', () => () => (
-  <div data-testid="footer-copyright">{new Date().getFullYear()} Copyright</div>
-));
+jest.mock('../FooterCopyright', () =>  
+  {
+    const MockedFooterCopyright = () => <div data-testid="footer-copyright">{new Date().getFullYear()} Copyright</div>;
 
-jest.mock('../NewsletterForm', () => () => (
-  <div data-testid="newsletter-form">Newsletter</div>
-));
+    MockedFooterCopyright.displayName = 'MockedFooterCopyright';
+    return MockedFooterCopyright;
+  }
+);
 
-jest.mock('../SocialIcons', () => () => (
-  <div data-testid="social-icons">Social Icons</div>
-));
+jest.mock('../NewsletterForm', () => { 
+  const MokedNewsletterForm = () => <div data-testid="newsletter-form">Newsletter</div>;
+
+  MokedNewsletterForm.displayName = 'MokedNewsletterForm';
+  return MokedNewsletterForm;
+});
+
+jest.mock('../SocialIcons', () => {
+  const SocialIcons = () => <div data-testid="social-icons">Social Icons</div>;
+
+  SocialIcons.displayName = 'SocialIcons';
+  return SocialIcons;
+});
 
 describe('Footer Component', () => {
   beforeEach(() => {

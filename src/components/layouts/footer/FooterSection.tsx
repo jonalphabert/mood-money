@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FooterLink, FooterSectionProps } from './type';
 
 const FooterSection = ({ title, links }: FooterSectionProps) => (
     <div>
