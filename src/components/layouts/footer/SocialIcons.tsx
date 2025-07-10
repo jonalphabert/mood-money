@@ -1,10 +1,10 @@
 const SocialIcons = () => (
     <div className="mt-4 flex space-x-4">
       {[
-        { icon: "fab fa-facebook-f", label: "Facebook", href: "#" },
-        { icon: "fab fa-twitter", label: "Twitter", href: "#" },
-        { icon: "fab fa-instagram", label: "Instagram", href: "#" },
-        { icon: "fab fa-linkedin-in", label: "LinkedIn", href: "#" }
+        { icon: "fab fa-facebook-f", label: "Facebook", href: "https://www.facebook.com" },
+        { icon: "fab fa-twitter", label: "Twitter", href: "https://www.twitter.com" },
+        { icon: "fab fa-instagram", label: "Instagram", href: "https://www.instagram.com" },
+        { icon: "fab fa-linkedin-in", label: "LinkedIn", href: "https://www.linkedin.com" },
       ].map((social) => (
         <a 
           key={social.label}

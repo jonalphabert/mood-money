@@ -1,3 +1,5 @@
+import { Send } from "lucide-react";
+
 const NewsletterForm = () => (
     <div className="mt-6">
       <p className="text-gray-400">Subscribe to our newsletter</p>
@@ -13,7 +15,7 @@ const NewsletterForm = () => (
           className="bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors"
           aria-label="Subscribe"
         >
-          <i className="fas fa-paper-plane"></i>
+        <Send />
         </button>
       </form>
     </div>

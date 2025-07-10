@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import FooterSection from './FooterSection';
 import FooterCopyright from './FooterCopyright';
 import NewsletterForm from './NewsletterForm';
