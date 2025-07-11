@@ -7,12 +7,12 @@ const NewsletterForm = () => (
         <input 
           type="email" 
           placeholder="Your email" 
-          className="px-4 py-2 rounded-l-lg w-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+          className="px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-primary outline outline-primary text-gray-200"
           aria-label="Email for newsletter"
         />
         <button 
           type="submit"
-          className="bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors"
+          className="bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors outline outline-primary"
           aria-label="Subscribe"
         >
         <Send />

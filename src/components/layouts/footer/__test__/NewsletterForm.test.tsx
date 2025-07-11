@@ -18,8 +18,8 @@ describe('NewsletterForm Component', () => {
         render(<NewsletterForm />);
         
         expect(screen.getByText(/Subscribe to our newsletter/)).toHaveClass('text-gray-400');
-        expect(screen.getByPlaceholderText("Your email")).toHaveClass('px-4 py-2 rounded-l-lg w-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary');
-        expect(screen.getByRole("button", { name: "Subscribe" })).toHaveClass('bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors');
+        expect(screen.getByPlaceholderText("Your email")).toHaveClass('px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-primary outline outline-primary text-gray-200');
+        expect(screen.getByRole("button", { name: "Subscribe" })).toHaveClass('bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors outline outline-primary');
     });
 
     test('displays correct icon', () => {

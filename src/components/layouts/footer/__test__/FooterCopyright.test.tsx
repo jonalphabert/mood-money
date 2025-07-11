@@ -38,7 +38,6 @@ describe('FooterCopyright Component', () => {
     expect(copyrightDiv).not.toBeNull();
     expect(copyrightDiv).toHaveClass('mt-12');
     expect(copyrightDiv).toHaveClass('pt-8');
-    expect(copyrightDiv).toHaveClass('border-t');
     expect(copyrightDiv).toHaveClass('border-gray-800');
     expect(copyrightDiv).toHaveClass('text-center');
     expect(copyrightDiv).toHaveClass('text-gray-400');

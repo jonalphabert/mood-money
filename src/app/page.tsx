@@ -1,33 +1,12 @@
 import Footer from "@/components/layouts/footer/Footer";
+import Navbar from "@/components/layouts/navbar/Navbar";
 import { MoveUp } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="font-sans bg-gradient-to-br from-white to-comfy min-h-screen relative">
     {/* // Navigation  */}
-    <nav className="bg-white shadow-sm sticky py-4 top-0 z-[999]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-                <div className="flex items-center">
-                    <div className="flex-shrink-0 flex items-center">
-                        <div className="bg-primary p-2 rounded-lg">
-                            <i className="fas fa-smile text-white text-2xl"></i>
-                        </div>
-                        <span className="ml-3 text-2xl font-bold text-gray-800">Mood Money</span>
-                    </div>
-                </div>
-                <div className="hidden md:flex items-center space-x-4">
-                    <a href="#" className="text-gray-600 hover:text-primary px-3 py-2 font-medium">Features</a>
-                    <a href="#" className="text-gray-600 hover:text-primary px-3 py-2 font-medium">Testimonials</a>
-                    <a href="#" className="text-gray-600 hover:text-primary px-3 py-2 font-medium">Pricing</a>
-                </div>
-                <div className="flex items-center">
-                    <a href="#" className="text-primary hover:text-secondary px-4 py-2 font-medium">Login</a>
-                    <a href="#" className="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-medium transition duration-300">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <Navbar />
 
     {/* // Hero Section  */}
     <section id="hero" className="py-12 md:py-24">
